@@ -1,0 +1,266 @@
+/* ==================== STYLE LIST TABLE ==================== */
+.section-list-object {
+    width: 100%;
+    min-height: 92vh;
+    background-color: rgb(223, 233, 243);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-title-and-path-list-object {
+    width: 95%;
+    height: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-title-list-object {
+    flex: 1;
+    text-align: left;
+}
+
+.wrapper-title-list-object {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    text-align: left;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.title-list-object-icon {
+    font-size: 1.2em;
+}
+
+
+.container-path-list-object {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.unordered-list-list-object {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+.list-list-object {
+    display: flex;
+    align-items: center;
+    color: #007bff;
+}
+
+.list-list-object span {
+    margin: 0 0.3em;
+    color: #000000;
+}
+
+.container-list-object {
+    width: 95%;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/* ==================== container-list-object-Header ==================== */
+.list-object-header {
+    /* height: 8em; */
+    width: 95%;
+    border-radius: 10px 10px 0 0;
+    background-color: #d1d5db;
+}
+
+.list-object-header-top {
+    height: 5em;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 10px 10px 0 0;
+}
+
+/* ==================== container-list-object-body ==================== */
+.list-object-body {
+    width: 95%;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* === Left: JSON hasil akhir === */
+.list-object-body-left {
+    flex: 1;
+    background-color: #eef5ff;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.list-object-json-preview {
+  font-family: monospace;
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+  max-height: 300px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+/* === Right: JSON builder === */
+.list-object-body-right {
+    flex: 1;
+    background-color: #eef5ff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* === JSON Output block === */
+.list-object-body-right h2,
+.list-object-body-right h4 {
+    margin-top: 0;
+}
+
+.list-object-button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.list-object-button-btn{
+    position: relative;
+    overflow: hidden;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: var(--Primary-Color);
+    color: var(--Primary-Background-Color);
+    z-index: 1;
+}
+
+.list-object-button-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 300%;
+    background-color: #1441f4;
+    transition: transform 0.2s ease-out;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.list-object-button-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.list-object-body-right-btn {
+    position: relative;
+    overflow: hidden;
+    padding: 4px 5px;
+    /* margin-left: 5px; */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Primary-Color);
+    color: var(--Primary-Background-Color);
+    border: none;
+    z-index: 1;
+}
+
+.list-object-body-right-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 300%;
+    background-color: #1441f4;
+    transition: transform 0.2s ease-out;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.list-object-body-right-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.list-object-icons {
+    font-size: 1.1em;
+}
+
+
+/* === JSON Item Styling === */
+.list-object-body-right-json-item {
+    margin-bottom: 4px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.json-item-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.json-item-header span {
+    font-size: 1em;
+}
+
+.list-object-body-right-json-nested {
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.list-object-body-right-json-nested-item {
+    margin: 4px 0;
+    padding: 6px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.list-object-body-right-json-nested span {
+    display: block;
+    margin-left: 20px;
+    font-size: 1em;
+}
+
+@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 768px) {
+    .list-object-body {
+        flex-direction: column;
+    }
+
+    .list-object-body-left,
+    .list-object-body-right {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 480px) {}

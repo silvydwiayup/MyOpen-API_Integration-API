@@ -1,0 +1,29 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* COLOR */
+  --Primary-Background-Color: #FAFAFA;
+  --Secondary-Background-Color: #FFFFFF;
+
+  --Primary-Color: #365CF5;
+  --Active-Color: #1A2142;
+  --Secondary-Color: #9AA4CA;
+
+  --Primary-Hover: #F3F4F6;
+
+  /* FONT SIZE */
+  --font-xs: 0.75em;
+  --font-sm: 0.875em;
+  --font-md: 1em;
+  --font-lg: 1.25em;
+  --font-xl: 1.5em;
+  --font-xxl: 2em;
+
+}

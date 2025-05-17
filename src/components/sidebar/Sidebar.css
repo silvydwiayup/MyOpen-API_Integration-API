@@ -1,0 +1,280 @@
+/* ==================== STYLE SIDEBAR ==================== */
+.section-sidebar {
+    display: flex;
+}
+
+.container-sidebar {
+    position: fixed;
+    width: 34vh;
+    height: 100vh;
+    background-color: var(--Primary-Background-Color);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    transition: width 0.3s ease-in-out;
+}
+
+.container-title-sidebar {
+    height: 3.2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container-title-sidebar .title-sidebar {
+    font-size: var(--font-xl);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 3.8em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.sidebar-menu-toggle::before,
+.sidebar-menu-toggle::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: var(--Primary-Color);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.sidebar-menu-toggle::before {
+    transform: translateY(-4px);
+}
+
+.sidebar-menu-toggle::after {
+    transform: translateY(4px);
+}
+
+/* ==================== BUTTON CREATE ==================== */
+.container-sidebar .container-sidebar-btn-create-project {
+    height: 3.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container-sidebar-btn-create-project .btn-sidebar-create-project {
+    width: 70%;
+    height: 80%;
+    border-radius: 5px;
+    background-color: var(--Primary-Color);
+    color: var(--Secondary-Background-Color);
+    border: none;
+}
+
+.btn-sidebar-create-project {
+    width: 100%;
+    height: 80%;
+    font-size: var(--font-sm);
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: var(--Primary-Color);
+    color: var(--Secondary-Background-Color);
+    border: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.container-sidebar-btn-create-project .container-sidebar-btn-create {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 80%;
+    border-radius: 5px;
+    background-color: var(--Primary-Color);
+    border: none;
+    cursor: pointer;
+}
+
+.container-sidebar-btn-create .sidebar-btn-create-icon {
+    font-size: 18px;
+    color: var(--Secondary-Background-Color);
+}
+
+/* ==================== SIDEBAR MENU ==================== */
+.sidebar-menu {
+    list-style: none;
+    padding: 0 10px;
+    margin: 20px 0 0 0;
+}
+
+.sidebar-item {
+    margin-bottom: 1px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: var(--Active-Color);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-link:hover {
+    background-color: #e5e5e5;
+    color: var(--Primary-Color);
+}
+
+.menu-text {
+    font-size: var(--font-md);
+    transition: opacity 0.3s ease;
+}
+
+.menu-text.hidden {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.sidebar-menu-icon {
+    color: var(--Primary-Color);
+    font-size: 20px;
+    min-width: 20px;
+    transition: color 0.3s ease;
+}
+
+.submenu-sidebar {
+    list-style: none;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    border-left: 2px solid #cccccc;
+    border-top: 2px solid #cccccc;
+    background-color: #e9e9e9;
+    border-radius: 6px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.submenu-sidebar.active {
+    max-height: 200px;
+    opacity: 1;
+    padding: 6px 0;
+}
+
+.submenu-link {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: var(--Active-Color);
+    font-size: var(--font-sm);
+    border-radius: 4px;
+    margin: 2px 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submenu-link:hover {
+    background-color: #f9f9f9;
+    color: var(--Primary-Color);
+}
+
+.sidebar-submenu-icon {
+    transition: transform 0.3s ease;
+    font-size: 14px;
+    color: #555;
+    margin-left: auto;
+}
+
+.sidebar-submenu-icon.open {
+    transform: rotate(180deg);
+}
+
+.sidebar-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.active-text {
+    color: var(--Primary-Color);
+}
+
+/* ==================== STYLE SIDEBAR Collapsed ==================== */
+.container-sidebar.collapsed {
+    width: 60px;
+}
+
+.container-sidebar.collapsed .title-sidebar {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.container-sidebar.collapsed .btn-sidebar-create-project{
+    display: none;
+}
+
+.container-sidebar.collapsed .container-sidebar-btn-create{
+    display: flex;
+}
+
+.sidebar-item.collapsed-hover {
+    position: relative;
+}
+
+.sidebar-item.collapsed-hover .submenu-sidebar {
+    position: absolute;
+    top: 0;
+    left: 55px;
+    z-index: 100;
+    background-color: var(--Secondary-Background-Color);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    border-radius: 8px;
+    padding: 6px 0;
+    display: none;
+}
+
+.sidebar-item.collapsed-hover .submenu-sidebar.active {
+    display: block;
+}
+
+.sidebar-item.collapsed-hover .submenu-link:hover {
+    background-color: #e5e5e5;
+    color: var(--Primary-Color);
+}
+
+
+/* ==================== STYLE RESPONSIVE LAYOUT ==================== */
+@media screen and (max-width: 380px) {
+    .container-sidebar {
+        width: 28vh;
+    }
+}

@@ -1,0 +1,80 @@
+.section-pengaturan {
+    width: 100%;
+    min-height: 92vh;
+    background-color: rgb(223, 233, 243);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-title-and-path-pengaturan {
+    width: 95%;
+    height: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-title-pengaturan {
+    flex: 1;
+    text-align: left;
+}
+
+.container-path-pengaturan {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.unordered-list-pengaturan {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+.list-pengaturan {
+    display: flex;
+    align-items: center;
+    color: #007bff;
+}
+
+.list-pengaturan span {
+    margin: 0 0.3em;
+    color: #000000;
+}
+
+.container-body-pengaturan {
+    width: 95%;
+    min-height: 40vh;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 20px;
+    gap: 1rem;
+}
+
+.pengaturan-card {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #adbdcd;
+    border-radius: 10px;
+    padding: 1.2em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    font-weight: 600;
+    font-size: 1em;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.pengaturan-card:hover {
+    background-color: #e6f0ff;
+    cursor: pointer;
+}
+

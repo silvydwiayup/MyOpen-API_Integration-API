@@ -1,0 +1,10 @@
+/* ==================== STYLE DASHBOARD ==================== */
+.app-layout {
+    display: flex;
+}
+
+.main-content {
+    flex: 1;
+    height: 200em;
+    transition: margin-left 0.3s ease-in-out;
+}

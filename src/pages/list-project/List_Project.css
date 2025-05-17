@@ -1,0 +1,323 @@
+/* ==================== STYLE SIDEBAR ==================== */
+.section-list-project {
+    width: 100%;
+    min-height: 92vh;
+    background-color: rgb(223, 233, 243);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-title-and-path-list-project {
+    width: 95%;
+    height: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-title-list-project {
+    flex: 1;
+    text-align: left;
+}
+
+.container-path-list-project {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.unordered-list-list-project {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+.list-list-project {
+    display: flex;
+    align-items: center;
+    color: #007bff;
+}
+
+.list-list-project span {
+    margin: 0 0.3em;
+    color: #000000;
+}
+
+.container-list-project {
+    width: 95%;
+    /* height: 80vh; */
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/* ==================== container-list-project-Header ==================== */
+
+.list-project-header {
+    height: 5em;
+    width: 95%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 10px 10px 0 0;
+}
+
+.btn-create-list-project {
+    position: relative;
+    overflow: hidden;
+    width: 10em;
+    height: 3em;
+    background-color: var(--Primary-Color);
+    border: none;
+    border-radius: 5px;
+    color: var(--Primary-Background-Color);
+    z-index: 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.btn-create-list-project::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 300%;
+    background-color: #1441f4;
+    transition: transform 0.2s ease-out;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.btn-create-list-project:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* ==================== container-list-project-body ==================== */
+.container-list-project-body {
+    width: 95%;
+    background-color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+    overflow: hidden;
+}
+
+/* ==================== Table ==================== */
+.table-scroll-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-list-project-body {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-thead-list-project {
+    width: 100%;
+}
+
+.table-row-head-list-project-body {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+.table-head-list-project-body {
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border-bottom: 2px solid #d1d5db;
+}
+
+.table-row-data-list-project-body {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.3s ease;
+    overflow: visible;
+}
+
+.table-data-list-project {
+    padding: 16px 16px;
+    font-size: 0.95em;
+    text-align: left;
+    vertical-align: middle;
+    position: relative;
+    overflow: visible;
+}
+
+/* ==================== Switch Toggle ==================== */
+.switch-table-list-project {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 22px;
+}
+
+.switch-table-list-project input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider-round-table-list-project {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #c22222;
+    transition: background-color 0.4s;
+    border-radius: 24px;
+}
+
+.slider-round-table-list-project::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 3px;
+    bottom: 3.5px;
+    background-color: white;
+    transition: transform 0.4s;
+    border-radius: 50%;
+}
+
+.switch-table-list-project input:checked + .slider-round-table-list-project {
+    background-color: var(--Primary-Color);
+}
+
+.switch-table-list-project input:checked + .slider-round-table-list-project::before {
+    transform: translateX(22px);
+}
+
+/* ==================== Dropdown ==================== */
+.center-icon {
+    cursor: pointer;
+    font-size: 1.4em;
+    transition: color 0.3s ease;
+}
+
+.icon-container:hover {
+    transition: color 0.1s ease-in-out;
+    color: #1441f4;
+}
+
+.dropdown-outside {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    width: 120px; /* <- Sesuaikan dengan yang di JS */
+}
+
+.dropdown-outside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-outside ul li {
+    font-size: 0.9em;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dropdown-outside ul li:hover {
+    background-color: #f2f2f2;
+}
+
+/* ==================== container-list-project-Bottom ==================== */
+
+.list-project-bottom {
+    height: 7em;
+    width: 95%;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ==================== STYLE RESPONSIVE ==================== */
+@media screen and (max-width: 768px) {
+    .container-list-project-body {
+        width: 95%;
+        padding: 0.5em;
+        overflow-y: auto;
+        max-height: 90vh;
+        /* min-width: 300px; */
+    }
+
+    .table-row-head-list-project-body {
+        font-size: var(--font-sm);
+    }
+
+    .table-list-project-body {
+        min-width: 600px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container-list-project-body {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container-list-project-body {
+        padding: 0.5em;
+    }
+
+    .container-title-and-path-list-project {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+        height: auto;
+        margin-bottom: 1.5em;
+        padding-top: 1.2em; 
+    }
+
+    .container-title-list-project {
+        margin-top: 0.5em;
+    }
+
+    .container-path-list-project {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .unordered-list-list-project {
+        flex-wrap: wrap;
+        font-size: 0.85em;
+    }
+
+    .list-project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+        height: auto;
+        padding-top: 1em;
+        padding-bottom: 1em;
+      }
+    
+    .btn-create-list-project {
+        width: 50%;
+        max-width: 10em;
+        min-width: 8em;
+    }
+}
